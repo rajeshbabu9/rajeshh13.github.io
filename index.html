@@ -37,6 +37,11 @@ SN_CSM_EC.init({
 });
 </script>
 <script>
+function logout(){
+	SN_CSM_EC.onLogout();
+}
+</script>
+<script>
         window.onload = function(){
             if(window.location.hash.indexOf("id_token") > -1){
                 SN_CSM_EC.onLogin();
