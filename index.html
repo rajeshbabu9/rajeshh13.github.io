@@ -30,24 +30,22 @@ https://templatemo.com/tm-531-reflux
 
   <body>
 
-<script src="https://k8s0117965-node1.sdthunder.lab3.service-now.com/scripts/sn_csm_ec.js"></script>
+<script src="https://friday.service-now.com/scripts/sn_csm_ec.js"></script>
 <script>
 SN_CSM_EC.init({
-	moduleID: "https://k8s0117965-node1.sdthunder.lab3.service-now.com/#4399792c0d30a050f877d2960a50756e"
+	moduleID: "https://friday.service-now.com/#653e6cf31bdca0d0e1a3bb751a4bcb0a",
+	tokenCallBack: getTokenCallBack 
 });
-</script>
+function getTokenCallBack(){
+	let idToken = window.location.hash.substring(1).split("&")[1].split("=")[1];
+	return Promise.resolve(idToken); 
+}
 <script>
 function logout(){
 	SN_CSM_EC.onLogout();
 }
 </script>
-<script>
-        window.onload = function(){
-            if(window.location.hash.indexOf("id_token") > -1){
-                SN_CSM_EC.onLogin();
-            }
-        }
-</script>	  
+	  
     <div id="page-wraper">
       <!-- Sidebar Menu -->
       <div class="responsive-nav">
@@ -61,7 +59,7 @@ function logout(){
             <div class="author-content">
               <h4>Reflux Me</h4>
               <span>Web Designer</span>
-		<a class="logInLInk" href="https://dev-203478.okta.com/oauth2/v1/authorize?client_id=0oau8tcev5A99xivz4x6&redirect_uri=https://rajeshh13.github.io&state=sfcdsfsd&scope=openid email profile&response_type=code id_token&response_mode=fragment&nonce=3ud9rzze0gf"
+		<a class="logInLInk" href="https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A//www.googleapis.com/auth/drive.metadata.readonly&include_granted_scopes=true&response_type=token&state=state_parameter_passthrough_value&redirect_uri=https%3A//rajeshh13.github.io&client_id=503535105162-gdnj03oth0sv737tcof450267q17q2ok.apps.googleusercontent.com"
           class="btn btn-info" id="loginButton">Login With Okta</a>
 		    <a id="logout" href="" onclick="logout()">Logout</a>
             </div>
