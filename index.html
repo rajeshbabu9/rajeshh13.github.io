@@ -58,6 +58,17 @@ function getTokenCallBack(){
 }
 </script>
 <script>
+
+<script src="https://k8s0128134-node1.thunder.lab3.service-now.com/scripts/sn_csm_ec.js"></script>
+<script>
+SN_CSM_EC.init({
+	moduleID: "https://k8s0128134-node1.thunder.lab3.service-now.com/#ab1327bf8d702010f8777cd433d0b5de"
+});
+
+/* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Center automatically when the user logs in to the main portal */
+/* Call SN_CSM_EC.onLogout() function to terminate the user session in the Engagement Center automatically when the user logs out from the main portal */
+</script>
+
 function logout(){
 	SN_CSM_EC.onLogout();
 }
