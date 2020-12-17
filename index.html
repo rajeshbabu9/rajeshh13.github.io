@@ -30,22 +30,15 @@ https://templatemo.com/tm-531-reflux
 
   <body>
 
+
 <script src="https://k8s0129632-node1.thunder.lab3.service-now.com/scripts/sn_csm_ec.js"></script>
 <script>
 SN_CSM_EC.init({
 	moduleID: "https://k8s0129632-node1.thunder.lab3.service-now.com/#badbc38e4cc52010f8776a729a9163a0"
 });
-</script>
- 
-<script src="https://friday.service-now.com/scripts/sn_csm_ec.js"></script>
-<script>
-SN_CSM_EC.init({
-	moduleID: "https://friday.service-now.com/#1287702fdb7024105bb9a422ca961993"
-});
-function getTokenCallBack(){
-	let idToken = window.location.hash.substring(1).split("&")[1].split("=")[1];
-	return Promise.resolve(idToken); 
-}
+
+/* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Center automatically when the user logs in to the main portal */
+/* Call SN_CSM_EC.onLogout() function to terminate the user session in the Engagement Center automatically when the user logs out from the main portal */
 </script>
 
 <script>
