@@ -51,10 +51,10 @@ function logout(){
 	var params = window.location.hash.substring(1).split("&");
 	var idToken = "";
 	var userID;
-	if(params[0].indexOf('id_token') != "-1"  &&  window.localStorage.getItem("loggin") != "true"){
+	if(window.location.hash.indexOf("access_token") > -1 &&  window.localStorage.getItem("loggin") != "true"){
                 window.localStorage.setItem("loggin", "true");
 		SN_CSM_EC.onLogin();
-		}
+	}
 	</script> 
 	  
     <div id="page-wraper">
